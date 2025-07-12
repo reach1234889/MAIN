@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sehaj Noor | A Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ffffff;
+            --dark: #000000;
+            --light: #000000;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .header-bg {
+            background: linear-gradient(135deg, #dd2424 0%, #000000 100%);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #000000, #ff0000, #000000, #000000);
+            background-size: 400% 400%;
+            animation: gradient-bg 15s ease infinite;
+        }
+        
+        @keyframes gradient-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .animate-bounce-alt {
+            animation: bounce-alt 2s infinite;
+        }
+        
+        @keyframes bounce-alt {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-black shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="pfp.png" alt="ExtremeNodes logo featuring a stylized lightning bolt inside a hexagon" class="h-8 w-8 mr-2">
+                            <span class="font-semibold text-indigo-800 text-lg">Sehaj Noor</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Primary Nav -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="py-4 px-3 text-indigo-600 font-medium">Home</a>
+                    <a href="#about" class="py-4 px-3 text-red-500 hover:text-indigo-600 transition duration-300">About</a>
+                    <a href="#projects" class="py-4 px-3 text-red-500 hover:text-indigo-600 transition duration-300">Projects</a>
+                    <a href="#services" class="py-4 px-3 text-red-500 hover:text-indigo-600 transition duration-300">Services</a>
+                    <a href="#contact" class="py-4 px-3 text-red-500 hover:text-indigo-600 transition duration-300">Contact</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-black-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="#home" class="block text-sm px-2 py-4 text-white bg-indigo-600 font-semibold">Home</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-indigo-600 hover:text-white transition duration-300">About</a></li>
+                <li><a href="#projects" class="block text-sm px-2 py-4 hover:bg-indigo-600 hover:text-white transition duration-300">Projects</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-indigo-600 hover:text-white transition duration-300">Services</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-indigo-600 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="header-bg text-white py-20">
+        <div class="container mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 flex flex-col justify-center items-start">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                    <span class="block">Hi, I'm Sehaj A Simple Developer</span>
+                    <span class="text-red-200">Founder of ExtremeNodes</span>
+                </h1>
+                <p class="text-lg text-indigo-100 mb-8">
+                    Crafting digital solutions and high-performance gaming infrastructure.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-8 py-3 bg-white text-red-600 rounded-full font-semibold hover:bg-indigo-100 transition duration-300">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <div class="relative animate-bounce-alt">
+                    <div class="w-64 h-64 bg-white bg-opacity-10 rounded-full"></div>
+                    <img src="logo.png" alt="Developer working on laptop with code editor visible, showing JavaScript code" class="absolute inset-0 mx-auto w-64 h-64 object-cover rounded-full border-4 border-white border-opacity-30">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-black">
+        <div class="container mx-black px-6">
+            <h2 class="text-3xl font-bold text-center text-red-800 mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h3 class="text-2xl font-semibold text-red-600 mb-4">Professional Developer</h3>
+                    <p class="text-gray-600 mb-4">
+                        With several years of experience in software development, I specialize in creating efficient, scalable solutions for both web applications and backend systems.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        My passion for technology extends beyond software development into infrastructure and gaming services, which led me to establish ExtremeNodes.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-4 py-2 bg-indigo-100 text-red-600 rounded-full">JavaScript</span>
+                        <span class="px-4 py-2 bg-indigo-100 text-red-600 rounded-full">Node.js</span>
+                        <span class="px-4 py-2 bg-indigo-100 text-red-600 rounded-full">React</span>
+                        <span class="px-4 py-2 bg-indigo-100 text-red-600 rounded-full">Docker</span>
+                        <span class="px-4 py-2 bg-indigo-100 text-red-600 rounded-full">Cloud Computing</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-red-600 mb-4">ExtremeNodes Founder</h3>
+                    <p class="text-gray-600 mb-4">
+                        ExtremeNodes specializes in high-performance Minecraft hosting and VPS solutions with global server locations and 99.9% uptime guarantees.
+                    </p>
+                    <div class="bg-indigo-50 p-6 rounded-lg border-l-4 border-red-600">
+                        <h4 class="font-semibold text-red-700 mb-2">Our Mission</h4>
+                        <p class="text-gray-700">
+                            To provide gamers and developers with the best hosting experience through cutting-edge technology, reliable infrastructure, and exceptional customer support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="My Projects" class="py-16 bg-RED"></section>
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-red-800 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f355d380-226b-46af-aa92-30571ff46067.png" alt="Website dashboard showing analytics for Minecraft server performance and uptime" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Server Dashboard</h3>
+                        <p class="text-gray-600 mb-4">
+                            A comprehensive control panel for Minecraft server administrators featuring real-time monitoring and controls.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">React</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">WebSocket</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition duration-300">
+                            <a href="https://panel.extremenodes.dpdns.org">View Project → </a>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-500">
+                    <img src="https://img.freepik.com/premium-vector/guide-flat-tiny-technical-faq-information-persons-concept_126608-1473.jpg" alt="Multiplayer game interface with chat functionality and player statistics" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Guide For How To Install Pterodactly Panel ON A Vps</h3>
+                        <p class="text-gray-600 mb-4">
+                            A Simple And Easy To Understand Guide Made By Me To Help People In Installing Pterodactly Panel On Their Vps Easily
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">Simple Command</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">Guide</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">Easy To Understand</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition duration-300">
+                           <a href="https://docs.extremenodes.dpdns.org">View Project → </a> 
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-500">
+                    <img src="logo.png" alt="Container management system interface with server deployment options" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-red-800 mb-2">Created A Website About Extreme Nodes </h3>
+                        <p class="text-gray-600 mb-4">
+                            I have created a professional website for my Hosting company, Extreme Nodes, to showcase our powerful and affordable hosting solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">HTML</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">CSS</span>
+                            <span class="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded">Java</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition duration-300">
+                            <a href="https://extremenodes.dpdns.org">View Project → </a> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 animated-gradient text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">ExtremeNodes Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="service-icon w-16 h-16 mb-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-2xl mx-auto transition duration-700">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Minecraft Hosting</h3>
+                    <p class="text-indigo-100 text-center">
+                        High-performance Minecraft servers with DDoS protection, instant setup, and full mod support.
+                        Starting at $0.20/month.
+                    </p>
+                    <div class="mt-6 text-center">
+                        <a href="https://extremenodes.dpdns.org" class="inline-block px-6 py-2 bg-white text-red-600 rounded-full font-medium hover:bg-indigo-100 transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="service-icon w-16 h-16 mb-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-2xl mx-auto transition duration-700">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">VPS Hosting</h3>
+                    <p class="text-indigo-100 text-center">
+                        Powerful virtual private servers with SSD storage, dedicated resources, and multiple OS options.
+                        Starting at $2/month.
+                    </p>
+                    <div class="mt-6 text-center">
+                        <a href="https://extremenodes.dpdns.org" class="inline-block px-6 py-2 bg-white text-red-600 rounded-full font-medium hover:bg-indigo-100 transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="service-icon w-16 h-16 mb-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-2xl mx-auto transition duration-700">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Custom Development</h3>
+                    <p class="text-indigo-100 text-center">
+                        Bespoke plugin and mod development for your Minecraft servers with premium support and maintenance.
+                    </p>
+                    <div class="mt-6 text-center">
+                        <a href="https://discord.gg/e2pxBHagZh" class="inline-block px-6 py-2 bg-white text-red-600 rounded-full font-medium hover:bg-indigo-100 transition duration-300">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-black-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2"><span class="count-up" data-target="500">0</span>+</div>
+                    <div class="text-indigo-200">Happy Clients</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2"><span class="count-up" data-target="50">0</span></div>
+                    <div class="text-indigo-200">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2"><span class="count-up" data-target="5">0</span></div>
+                    <div class="text-indigo-200">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2"><span class="count-up" data-target="99">0</span>.<span class="count-up" data-target="9">0</span>%</div>
+                    <div class="text-indigo-200">Uptime Guarantee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-lg p-3">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-sm font-semibold text-gray-500">Email</h4>
+                                <p class="text-gray-800">contact@extremenodes.dpdns.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-lg p-3">
+                                <i class="fas fa-globe text-indigo-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-sm font-semibold text-gray-500">Website</h4>
+                                <p class="text-gray-800">https://extremenodes.dpdns.org</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Social Media</h3>
+                    <div class="flex space-x-4">
+                        
+                        </a>
+                        <a href="https://github.com/justbelikeomer" class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-200 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://discord.gg/e2pxBHagZh" class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-200 transition duration-300">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="space-y-6 bg-gray-50 p-6 rounded-lg">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="flex items-center">
+                        <img src="logo.png" alt="ExtremeNodes logo featuring a stylized lightning bolt inside a hexagon" class="h-8 w-8 mr-2">
+                        <span class="font-semibold text-lg">ExtremeNodes</span>
+                    </a>
+                    <p class="mt-2 text-indigo-200 text-sm">High-performance hosting solutions for gamers and developers.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-indigo-200 mb-2">© <span id="year"></span> ExtremeNodes. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-200 hover:text-white transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-indigo-200 hover:text-white transition duration-300">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector(".mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+        
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animate stats counting
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Count up animation for stats
+        const countUpElements = document.querySelectorAll('.count-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            entry.target.innerHTML = target;
+                            clearInterval(timer);
+                        } else {
+                            entry.target.innerHTML = Math.floor(current);
+                        }
+                    }, 20);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        countUpElements.forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
